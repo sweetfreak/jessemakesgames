@@ -2,11 +2,18 @@ import React, { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 //images
 import BFrogLogo from "../assets/images/BFrogLogo.png"
-import BFrogGameplay from "../assets/images/BFrogBG.png"
+import BFrogGameplay from "../assets/images/BFrogBG2.png"
 import EntropyLogo from "../assets/images/EntropyLogo.png"
+import MFLogo from "../assets/images/MFLogo.png"
+import MFScreenshot from "../assets/images/MFScreenshot.jpg"
 import EntropyGame from "../assets/images/EntropyGame.png"
 import ghostLogo from "../assets/images/ghoststoryLogo.png"
 import ghostGame from "../assets/images/ghoststoryScreens.png"
+import nogginGames from "../assets/images/NogginGamesCollage2024.png"
+import nogginLogo from "../assets/images/nogginlogo.png"
+import gameJamsCollage from "../assets/images/gamejamscollage2.png"
+import sweetfreaklogo from "../assets/images/sweetfreakLogo_AI.png"
+
 
 function Projects() {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -14,59 +21,66 @@ function Projects() {
   
   const projects = [
     {
+      title: "MineFind",
+      role: "Creator, Game Designer, Developer",
+      completionDate: "October 2025",
+      description: "My take on the classic minefinding puzzle game, and my first published app on the app store. I created this game in 6 weeks as a learning exercise, to great success!",
+      image: MFLogo,
+      caption: "Click the tile download MineFind from the App Store!",
+      link: "https://apps.apple.com/us/app/minefind-puzzle-game/id6752503126",
+      backgroundImage: MFScreenshot
+    },
+    {
       title: "Business Frog",
       role: "Creator, Game Designer, Developer",
       completionDate: "July 2023",
-      description: "Spent ~6 months of non-working time to hand-craft this hardcore 2D platformer about a frog who needs to get to work on time.",
+      description: "I hand-crafted this hardcore 2D platformer about a frog who needs to get to work on time. During the 6 months it took to create this game, I completed designed the levels and game mechanics, completed multiple rounds of playtesting, and even composed the soundtrack, while managing a handful of friends who helped out with the artwork. Very proud of this one.",
       image: BFrogLogo,
+      caption: "Click the tile to play Business Frog!",
       link: "https://sweetfreak.itch.io/business-frog",
       backgroundImage: BFrogGameplay
     },
     {
+        title: "Noggin Games",
+        role: "Lead Game Designer and Senior Producer of HTML5 Games",
+        completionDate: "July 2020-February 2024",
+        description: "Led HTML5/web game production for Nickelodeon's Noggin platform, where I oversaw development for each of my 18 games from concept to launch. Collaborated closely with artists and developers to craft innovative mechanics, write engaging scripts, and ensure both creative vision and technical execution met high-quality standards. (I do not own these games, they are property of Nickelodeon)",
+        image: nogginLogo,
+        caption: "Click tile to see a video showcasing my Noggin Games",
+        link: "https://vimeo.com/994058258",
+        backgroundImage: nogginGames
+      },
+      {
+        title: "A Terrifying Ghost Story",
+        role: "Co-Creator and Developer",
+        completionDate: "October 2024",
+        description: "A terrifying choose-your-own-adventure about a ghost looking for closure in the afterlife. For this project, I worked with a close friend who created the artwork. Together we wrote the story, while I handled the programming.",
+        image: ghostLogo,
+        caption: "Click tile to play A Terrifying Ghost Story!",
+        link: "https://sweetfreak.github.io/ghoststoryboo/",
+        backgroundImage: ghostGame
+      },
+    {
       title: "Entropy Survivors",
       role: "QA Tester",
       completionDate: "Fall 2024",
-      description: "QA Tester for Entropy Survivors, a bullet hell roguelike by Moving Pieces Interactive.",
+      description: "QA Tester for Entropy Survivors, a bullet hell roguelike by Moving Pieces Interactive. I was responsible for playing the game and reporting my progress to the devs who were working on player progression and game balance. I also submitted bugs and other feedback via JIRA. (I do not own this game, it is property of Moving Pieces Interactive)",
       image: EntropyLogo,
+      caption: "Click tile to visit the Entropy Survivors Steam page!",
       link: "https://store.steampowered.com/app/2602030/Entropy_Survivors/",
       backgroundImage: EntropyGame
     },
     {
-      title: "A Terrifying Ghost Story",
-      role: "dddddd",
-      completionDate: "October 2024",
-      description: "text here",
-      image: ghostLogo,
-      link: "https://sweetfreak.github.io/ghoststoryboo/",
-      backgroundImage: ghostGame
+      title: "Game Jams and More!",
+      role: "Various Titles",
+      completionDate: "2019-2025",
+      description: "Check out my Itch.io page for projects from past game jams and more! I did not make the majority of this artwork, but I did participate in each project in roles such as a programmer, designer, and QA Tester.",
+      image: sweetfreaklogo,
+      caption: "Click tile to see my Itch.io page!",
+      link: "https://sweetfreak.itch.io/",
+      backgroundImage: gameJamsCollage
     },
-    {
-      title: "Racing Evolution",
-      role: "Physics Programmer",
-      completionDate: "November 2022",
-      description: "A realistic racing simulator with advanced vehicle physics and dynamic weather systems. Implemented the vehicle physics engine and weather effects.",
-      image: "/images/racing-evolution.jpg",
-      link: "https://racing-evolution.com",
-      backgroundImage: "/images/racing-evolution-bg.jpg"
-    },
-    {
-      title: "Zombie Survival",
-      role: "AI Programmer",
-      completionDate: "July 2022",
-      description: "A survival horror game with sophisticated AI behavior systems. Developed the zombie AI pathfinding and behavior trees.",
-      image: "/images/zombie-survival.jpg",
-      link: "https://zombie-survival.com",
-      backgroundImage: "/images/zombie-survival-bg.jpg"
-    },
-    {
-      title: "Platform Adventure",
-      role: "Solo Developer",
-      completionDate: "March 2022",
-      description: "A challenging platformer with unique mechanics and hand-crafted levels. Designed and implemented all game systems and created original artwork.",
-      image: "/images/platform-adventure.jpg",
-      link: "https://platform-adventure.com",
-      backgroundImage: "/images/platform-adventure-bg.jpg"
-    }
+   
   ];
 
   useEffect(() => {
@@ -120,19 +134,27 @@ function Projects() {
   }, []);
 
   return (
-    <div className="projects-container">
-      {projects.map((project, index) => (
-        <ProjectCard
-          key={index}
-          {...project}
-        />
-      ))}
-      <div className={`scroll-indicator ${(isScrolling || isBottom) ? 'hidden' : ''}`}>
-        <p className="scroll-text">Scroll to see more</p>
-        <div className="scroll-arrows">
-          <div className="arrow"></div>
-          <div className="arrow"></div>
-          <div className="arrow"></div>
+    <div className="projects-page">
+      <div className="projects-header">
+        <h1>Projects</h1>
+        <p className="projects-intro">
+          Here's a collection of my finest work, both personal and professional. Go crazy!
+        </p>
+      </div>
+      <div className="projects-container">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            {...project}
+          />
+        ))}
+        <div className={`scroll-indicator ${(isScrolling || isBottom) ? 'hidden' : ''}`}>
+          <p className="scroll-text">Scroll to see more</p>
+          <div className="scroll-arrows">
+            <div className="arrow"></div>
+            <div className="arrow"></div>
+            <div className="arrow"></div>
+          </div>
         </div>
       </div>
     </div>

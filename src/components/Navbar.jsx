@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";  // Import Link from react-router-dom
-import JesseInverse from "../assets/images/JesseInverse.jpg";
+import JesseHeader from "../assets/images/jesseNice.jpeg";
+
 const Navbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const [isSpinning, setIsSpinning] = useState(false);
   const navRef = useRef(null);
 
   useEffect(() => {
@@ -30,6 +32,11 @@ const Navbar = () => {
     setIsNavCollapsed(!isNavCollapsed);
   };
 
+  const handleImageClick = () => {
+    setIsSpinning(true);
+    setTimeout(() => setIsSpinning(false), 1500); // Match the animation duration
+  };
+
   const handleLinkClick = () => {
     setIsNavCollapsed(true);
   };
@@ -37,8 +44,13 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark custom-navbar" ref={navRef}>
       <div className="container-fluid">
-        <img src = {JesseInverse} alt = "Jesse Sheehan with inverse colors" className="navbar-brand nav-img" />
-        <Link className="navbar-brand" to="/">Jesse Sheehan Makes Games</Link>
+        <img 
+          src={JesseHeader} 
+          alt="Jesse Sheehan with inverse colors" 
+          className={`navbar-brand nav-img ${isSpinning ? 'spinAndColor' : ''}`}
+          onClick={handleImageClick}
+        />
+        <Link className="navbar-brand" to="/">Jesse Makes Games</Link>
         <button 
           className={`navbar-toggler ${isNavCollapsed ? 'collapsed' : ''}`}
           type="button" 
@@ -63,9 +75,9 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/contact" onClick={handleLinkClick}>Contact</Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/portfolio" onClick={handleLinkClick}>Portfolio</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

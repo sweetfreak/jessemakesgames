@@ -1,5 +1,5 @@
 // App.js
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -9,10 +9,16 @@ import Projects from "./pages/Projects";
 import Navbar from "./components/Navbar"; // Import Navbar
 import Footer from "./components/Footer";
 import "./App.css"; // Custom styles
+import backgroundDesign from './assets/images/backgroundDesign.png';
 
 function App() {
+  useEffect(() => {
+    document.documentElement.style.setProperty('--background-design', `url(${backgroundDesign})`);
+  }, []);
+
   return (
-    <Router>
+    <Router basename="/jessemakesgames">
+    {/* <Router> */}
       <div className="app-container">
         <Navbar />
         <div className="container">
