@@ -15,20 +15,16 @@ function Contact() {
       body: "Dear Jesse,\n\nI'm reaching out regarding a potential job opportunity...",
     },
     {
-      reason: "I've Got a Bone To Pick With You! 😡",
+      reason: "I've Got a Bone To Pick With You! ",
       subject: "Now You've Done It! I'm Coming For You, Sheehan!",
-      body: "Hey Nimrod/Nincompoop !\n\n Why I oughta! Let me tell you why you're in for a world of hurt!\n\n",
+      body: "Hey Nimrod 😡\n\n You got a lotta nerve making games this fun and entertaining!!\n\n",
     },
     {
       reason: "Check Out This HOT SCOOP! DO NOT SHARE!",
       subject: "Ya Didn't Hear It From Me, But Hooo Boy, This Is A Big One!",
-      body: "DO NOT SHARE THIS WITH ANYONE! I don't even know if I trust you - I mean, why should I? What have you done for me, lately? Well anyway. \n\n Okay, so here it goes...",
+      body: "Just wait till you hear about this hot scoop...",
     },
-    {
-      reason: "Critique Of Your Games",
-      subject: "Why Oh Why Did You Do This In Your Game?",
-      body: "Hey genius,\n\nI played one of your games and was wondering why on earth you ever made some of these decisions. \nHere's the first of my dozen or so grievances:",
-    },
+
   ];
 
   const generateMailtoLink = (option) => {

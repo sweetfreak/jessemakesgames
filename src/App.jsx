@@ -8,6 +8,7 @@ import Portfolio from "./pages/Portfolio";
 import Projects from "./pages/Projects";
 import Navbar from "./components/Navbar"; // Import Navbar
 import Footer from "./components/Footer";
+import DesignProcess from "./pages/DesignProcess";
 import "./App.css"; // Custom styles
 import backgroundDesign from './assets/images/backgroundDesign.png';
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/designprocess" element={<DesignProcess />} />
           </Routes>
         </div>
         <Footer />
