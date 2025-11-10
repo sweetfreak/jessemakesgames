@@ -17,7 +17,7 @@ export default function DesignProcess() {
             
             <hr />
             
-            <div className="mb-5 d-flex justify-content-center">
+            <div className="mb-5 d-flex flex-column align-items-center">
                 <div className="ratio ratio-16x9" style={{ maxWidth: '800px', width: '100%' }}>
                     <iframe 
                         src="https://www.youtube.com/embed/sUQ9y3Tg4H8" 
@@ -26,7 +26,9 @@ export default function DesignProcess() {
                         allowFullScreen
                     ></iframe>
                 </div>
-                <caption>Pre-alpha footage of a version of Kaigoo's Revenge used for testing</caption>
+                <p className="text-muted mt-2 small text-center" style={{ maxWidth: '800px' }}>
+                    Pre-alpha footage of a version of Kaigoo's Revenge used for testing
+                </p>
             </div>
             
             <div className="mb-5">
