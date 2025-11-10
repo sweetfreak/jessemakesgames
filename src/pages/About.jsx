@@ -3,7 +3,7 @@ import jessebeatles from '../assets/images/JesseBeatles.png';
 
 function About() {
   return (
-    <div className="about-container mt-5">
+    <div className="about-container">
       <div className="about-content">
         <img src={jessebeatles} alt="Jesse looking quite tired" className="about-image" />
         <div className="about-text">

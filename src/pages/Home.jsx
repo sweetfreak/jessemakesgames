@@ -19,7 +19,7 @@ function Home() {
           <br></br>
           <br></br>
           <p>TL;DR</p>
-          <p>I have</p>
+          <p>I've been making and producing games for a while now, and I'm excited to share my process through this website!</p>
            <br></br>
            <br></br>
            {/* <strong>NOTE:</strong> This website is still under construction, but I'll be adding more content soon! */}
