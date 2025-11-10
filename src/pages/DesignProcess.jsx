@@ -38,7 +38,8 @@ export default function DesignProcess() {
                     Kaigoo's Revenge is a title made in collaboration with CrabOnFire, in which I am the lead designer and support programmer for this Unity game. Below are a small selection of my first round of game design notes upon returning after taking a hiatus while I compeleted my batch at Recurse Center in Fall 2025.
                 </p>
 
-                <ul className="list-unstyled">
+                <div className="border rounded p-3 bg-light design-notes-scroll">
+                    <ul className="list-unstyled mb-0">
 
                 
                     <li className="mb-2"><strong>Stage 0 Notes</strong> </li>
@@ -82,8 +83,9 @@ export default function DesignProcess() {
 
                     <li className="mb-2"><strong>Question/suggestion:</strong> </li>
 
-                    <li className="mb-2">• I think the camera zoom out so you see the full screen - most runners don't have much camera movement at all, maybe we should think about doing it that way. If we could always see the lower platform, the game would be far less cruel and challenging, I think.</li>
-                </ul>
+                    <li className="mb-2">• I think the camera needs to zoom out so you see the full screen - most runners don't have much camera movement at all, maybe we should think about doing it that way. If we could always see the lower platform, the game would be far less cruel and challenging, I think.</li>
+                    </ul>
+                </div>
             </div>
             
             <hr />
@@ -92,6 +94,7 @@ export default function DesignProcess() {
             
             <div className="mb-5">
                 <h3>Playtesting Business Frog and MineFind</h3>
+                <p>This section will be all about how I conducted playtesting with Google Forms during the production of my two solo-developed games, inspired by my work and Playtesting at Noggin.</p>
                 <p className="text-muted">Content coming soon...</p>
             </div>
 
@@ -100,7 +103,8 @@ export default function DesignProcess() {
             {/* <img src={designProcessImage} alt="Design Process" className="design-process-image" /> */}
             
             <div className="mb-5">
-                <h3>Concepting Games for Noggin</h3>
+                <h3>Concepting and Problem-solving for Noggin Games</h3>
+                <p>This section will discuss an example of how I devised game concepts at Noggin, and problem-solved technical and creative issues.</p>
                 <p className="text-muted">Content coming soon...</p>
             </div>
         </div>

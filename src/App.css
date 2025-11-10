@@ -502,3 +502,23 @@ p {
     padding: 10px;
   }
 }
+
+/* Scrollable design notes container */
+.design-notes-scroll {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+@media (max-width: 768px) {
+  .design-notes-scroll {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-notes-scroll {
+    max-height: 300px;
+  }
+}
